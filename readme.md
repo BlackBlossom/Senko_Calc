@@ -6,7 +6,6 @@ Senko_Calc is a stylish and interactive calculator web application built using H
 
 - Supports basic arithmetic operations: Addition, Subtraction, Multiplication, Division, and Modulus.
 - Interactive buttons with animations for a better user experience.
-- Customizable themes and styles.
 - Real-time display updates for current and previous calculations.
 - Clear (AC) and Delete functions to manage input.
 
