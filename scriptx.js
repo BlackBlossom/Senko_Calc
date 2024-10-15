@@ -6,18 +6,25 @@ class Calculator {
     }
 
     clear() {
-        this.currentOperand = '';
-        this.previousOperand = '';
+        this.currentOperand = '0';
+        this.previousOperand = ' ';
         this.operation = undefined;
     }
 
     delete() {
         this.currentOperand = this.currentOperand.toString().slice(0, -1);
+        if (this.currentOperand === '' && this.previousOperand !== ''){
+            this.currentOperand = '0';
+        }
     }
 
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) return;
         this.currentOperand = this.currentOperand.toString() + number.toString();
+    }
+
+    piOperand() {
+        this.currentOperand = Math.PI;
     }
 
     chooseOperation(operation) {
@@ -93,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const equalsButton = document.querySelector('[data-equals]');
     const deleteButton = document.querySelector('[data-delete]');
     const allClearButton = document.querySelector('[data-all-clear]');
+    const piButton = document.querySelector('[data-pi]');
     const previousOperandTextElement = document.querySelector('[data-previous-operand]');
     const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
@@ -112,6 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    piButton.addEventListener('click', button => {
+        calculator.piOperand();
+        calculator.updateDisplay();
+    })
+
     equalsButton.addEventListener('click', button => {
         calculator.compute();
         calculator.updateDisplay();
@@ -127,4 +140,3 @@ document.addEventListener('DOMContentLoaded', () => {
         calculator.updateDisplay();
     });
 });
-
