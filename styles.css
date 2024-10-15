@@ -1,13 +1,12 @@
 
 @font-face {
     font-family: 'kardust';
-    src: url('https://github.com/BlackBlossom/Senko_Calc/raw/refs/heads/main/Kardust.otf') format('opentype');
+    src: url('Kardust.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    /*background: linear-gradient(to bottom, black 0%,#ed8114 60%,black 100%);*/
     background-color: black;
     display: flex;
     justify-content: center;
@@ -39,7 +38,6 @@ body {
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
-    height: 70px;
     padding: 20px;
     font-size: 2em;
     word-wrap: break-word;
