@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'kardust';
-    src: url('Kardust.otf') format('opentype');
+    src: url('/Kardust.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -45,10 +45,12 @@ body {
 }
 .output .previous-operand{
     color: rgba(225,225,225,.75);
+    content: '';
     font-size: 1.5rem;
 }
 .output .current-operand{
     color: white;
+    content: '';
     font-size: 2.5rem;
 }
 .button {
