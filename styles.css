@@ -1,0 +1,77 @@
+
+@font-face {
+    font-family: 'kardust';
+    src: url('/Kardust.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    /*background: linear-gradient(to bottom, black 0%,#ed8114 60%,black 100%);*/
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'kardust', sans-serif;
+}
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 300px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 5%;
+    box-shadow: 0 0 60px cyan;
+    transition: box-shadow 0.3s ease;
+}
+.calculator:hover{
+    box-shadow: 0 0 80px cyan ;
+
+}
+.output {
+    grid-column: 1 / -1;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 70px;
+    padding: 20px;
+    font-size: 2em;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-operand{
+    color: rgba(225,225,225,.75);
+    font-size: 1.5rem;
+}
+.output .current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
+.button {
+    background-color: #242424;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-family: 'kardust', sans-serif;
+    font-size: 1.5em;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.button:hover{
+    background-color:  #333;
+    transform: scale(1.05);
+}
+.button.equals{
+    background-color: cyan;
+    color: black;
+}
+.button.operation{
+    color: cyan;
+}
