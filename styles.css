@@ -18,11 +18,11 @@ body {
 .calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(120px, auto) repeat(5, 1fr);
+    grid-template-rows: minmax(121px, auto) repeat(5, 1fr);
     gap: 10px;
-    width: 300px;
+    width: 320px;
     background-color: black;
-    padding: 20px;
+    padding: 15px;
     border-radius: 5%;
     box-shadow: 0 0 60px cyan;
     transition: box-shadow 0.3s ease;
