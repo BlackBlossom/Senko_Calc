@@ -18,7 +18,7 @@ body {
 .calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(125px, auto) repeat(5, 1fr);
+    grid-template-rows: minmax(120px, auto) repeat(5, 1fr);
     gap: 10px;
     width: 300px;
     background-color: black;
@@ -39,7 +39,7 @@ body {
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     font-size: 2em;
     word-wrap: break-word;
     word-break: break-all;
