@@ -27,8 +27,30 @@ class Calculator {
         this.currentOperand = Math.PI;
     }
 
+    percentage() {
+        if(this.operation === '+' || this.operation === '-') {
+            // if addition or subtraction, calculate percentage of previous operand
+            const prev = parseFloat(this.previousOperand);
+            const current = parseFloat(this.currentOperand);
+            if (isNaN(prev) || isNaN(current)) return;
+            this.currentOperand = (prev * current) / 100;
+        } else {
+            // else divide by 100
+            const current = parseFloat(this.currentOperand);
+            if (isNaN(current)) return;
+            this.currentOperand = current / 100;
+        }
+    }
+
     chooseOperation(operation) {
         if (this.currentOperand === '') return;
+
+        if (operation === '%' ) {
+            this.percentage();
+            this.updateDisplay();
+            return;
+        }
+
         if (this.previousOperand !== '') {
             this.compute();
         }
@@ -54,9 +76,6 @@ class Calculator {
                 break;
             case '÷':
                 computation = prev / current;
-                break;
-            case '%':
-                computation = prev % current;
                 break;
             default:
                 return;
